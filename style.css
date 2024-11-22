@@ -1,0 +1,469 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0 auto; 
+}
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-theme .section,
+body.dark-theme .section2,
+body.dark-theme .row,
+body.dark-theme .contact-container,
+body.dark-theme .contact-text,
+body.dark-theme td,
+body.dark-theme .info-feature,
+body.dark-theme .info-container{
+background-color: #1e1e1e;
+color: #ffffff;
+}
+body.dark-theme .play-button {
+background-color: #ff0000;
+color: #ffffff;
+}
+body.dark-theme .description-container {
+color: #ffffff;
+}
+
+/* Dark theme specific styles for tables */
+body.dark-theme table {
+border-color: #444;
+}
+
+body.dark-theme th, body.dark-theme td {
+border-color: #666;
+}
+
+body.dark-theme th {
+background-color: #333;
+color: red;
+}
+body.dark-theme .filter-container {
+background-color: #121212; /* Dark background for the container */
+color: #fff; /* Light text color for readability */
+}
+body.dark-theme .filter-group {
+background-color: #121212; /* Dark background for each filter group */
+color: #fff; /* Light text color for readability */
+border: 1px solid #444; /* Border color matching dark theme */
+}
+
+body.dark-theme .filter-group label {
+color: #ddd; /* Light text color for labels */
+}
+
+body.dark-theme .filter-group select {
+background-color: #444; /* Dark background for select dropdowns */
+color: #fff; /* Light text color for select dropdowns */
+border: 1px solid #555; /* Border color matching dark theme */
+}
+
+/* Style for filter dropdowns */
+body.dark-theme select {
+background-color: #444; /* Dark background for dropdowns */
+color: #fff; /* Light text color for dropdowns */
+border: 1px solid #555; /* Border color matching dark theme */
+}
+
+body.dark-theme textarea {
+background-color: #444; /* Dark background for textareas */
+color: #fff; /* Light text color for textareas */
+border: 1px solid #555; /* Border color matching dark theme */
+}
+body.dark-theme .player-controls button {
+background-color: #ff0000;
+}
+body.dark-theme .episode-item a{
+background-color: #121212;
+color: #fff;
+}
+#navigation {
+padding-top: 10px;
+padding-bottom: 10px;
+display: flex;
+position: fixed ;
+width: 100%;
+background-color: #333;
+z-index: 1000;
+}
+.nav-links,
+.login-image,
+.profile-link{
+color: #fff;
+text-decoration: none;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+margin-right: 5px;
+width: 35px;
+height: 35px;
+}
+.nav-icon{
+width: 35px;
+height: 35px;
+}
+.logo-image {
+width: 200px; 
+height: 50px;
+padding-left: 5px;
+padding-right: 5px;
+}
+.login-image{
+width: 35px;
+height: 35px;
+}
+.profile-photo{
+display: flex;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+}
+#navigation .language-selector {
+margin: 0 20px; /* Adjust margin to control space between links and theme button */
+}
+/* Hover effect for the navigation links */
+#navigation a:hover {
+text-decoration: underline;
+}
+
+/* Center the logo and links horizontally */
+#navigation {
+justify-content: right;
+}
+.language-selector {
+background: none;
+border: 1px solid #fff;
+color: #fff;
+font-size: 16px;
+padding: 5px;
+cursor: pointer;
+order: 6;
+background-color: #333;
+}
+.language-selector-mobile {
+display:none;
+background: none;
+border: 1px solid #fff;
+color: #fff;
+font-size: 16px;
+padding: 5px;
+cursor: pointer;
+text-align: center;
+margin-left: 50px;
+margin-right: 50px;
+background-color: #333;
+order: 6;
+}
+
+.subject button {
+display: block;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin: 0 auto;
+background-color: #fd0000;
+width: auto;
+height: 40px;
+}
+
+/* Mobile Menu Button */
+.menu-button {
+display: none; /* Hidden by default */
+font-size: 24px; /* Adjust size */
+background: none;
+border: none;
+cursor: pointer;
+outline: none;
+color: white;
+padding-left: 10px;
+padding-right: 10px;
+}
+.menu-button img{
+width: 35px;
+height: 35px;
+}
+.close-button {
+background: none;
+border: none;
+font-size: 24px; /* Adjust size */
+cursor: pointer;
+margin: 15px; /* Space around the button */
+align-self: flex-end; /* Align it to the right */
+display: none;
+color: white;
+}
+.links-container {
+display: flex; /* Default display for desktop */
+gap: 15px; /* Space between links */
+}
+/* Mobile-specific styles */
+[lang="ar"] .links-container.mobile {
+transition: right 0.3s ease; /* Smooth transition */
+}
+@keyframes slide{
+  0% {width: 0%;}
+  100% {width: 200px;}
+}
+.links-container.mobile {
+position: fixed; /* Fixed position for mobile */
+bottom: 0;
+top: 75px;
+width: 200px; /* Adjust width as needed */
+background-color: #333; /* Background for menu */
+flex-direction: column; /* Stack links vertically */
+overflow-y: auto;
+animation: slideoff 1s;
+}
+/* Show links when activated */
+[lang="ar"] .links-container.mobile.show {
+  right: 0; /* Slide into view */
+  }
+.links-container.mobile.show {
+left: 0; /* Slide into view */
+}
+.links-container a:hover {
+background-color: #444; /* Hover effect */
+}
+/* Make sure the dark theme button is visible and styled */
+.theme-toggle-button {
+margin-right: auto;
+order: 5;
+border: 0;
+background-color: unset;
+}
+  
+.theme-toggle-button img{
+width: 35px;
+height: auto;
+}
+.subject li{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.course-list {
+  display: none; /* Initially hidden */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toggle-img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.section{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.section2 a {
+  text-decoration: none;
+}
+
+.section img, .section video {
+  width: 40%;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(100%); 
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+[lang="ar"] .section .text {
+  animation: slide-right 1s forwards; /* Apply the animation */
+}
+
+[lang="ar"] .section.reverse .text {
+  animation: slide-left 1s forwards; /* Apply the animation */
+}
+
+.section .text {
+  width: 60%;
+  padding: 20px;
+  font-size: 20px;
+  animation: slide-left 1s forwards; /* Apply the animation */
+  overflow: hidden;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section.reverse .text {
+  animation: slide-right 1s forwards; /* Apply the animation */
+  overflow: hidden;
+}
+
+.section a {
+  text-decoration: none;
+}
+
+
+/* Define colors for light and dark themes */
+:root {
+  --scrollbar-track-light: #f1f1f1;
+  --scrollbar-thumb-light: #888;
+  --scrollbar-thumb-hover-light: #555;
+
+  --scrollbar-track-dark: #2c2c2c;
+  --scrollbar-thumb-dark: #aaa;
+  --scrollbar-thumb-hover-dark: #888;
+}
+
+/* Light theme scrollbar styles */
+.light-theme {
+  --scrollbar-track: var(--scrollbar-track-light);
+  --scrollbar-thumb: var(--scrollbar-thumb-light);
+  --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-light);
+}
+
+/* Dark theme scrollbar styles */
+.dark-theme {
+  --scrollbar-track: var(--scrollbar-track-dark);
+  --scrollbar-thumb: var(--scrollbar-thumb-dark);
+  --scrollbar-thumb-hover: var(--scrollbar-thumb-hover-dark);
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track); /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover); /* Color of the thumb on hover */
+}
+
+/* Custom scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* Thumb color and track color */
+}
+
+footer{
+  padding: 10px ;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+@media (max-width: 720px){
+.section {
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.section .text {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.5; /* Improve readability */
+  overflow: auto; /* Allow scrolling if necessary */
+  flex-grow: 1; /* Allow text to grow within the container */
+}
+
+.section.reverse {
+  flex-direction: column; /* Ensure reverse section stacks vertically */
+}
+
+.section.reverse .text {
+  animation: none; /* Optionally disable animation on mobile */
+  width: 100%; /* Ensure full width */
+  flex-grow: 1; /* Allow text to grow within the container */
+  padding: 10px; /* Adjust padding */
+  overflow: auto; /* Allow scrolling if necessary */
+  font-size: 18px; /* Maintain readability */
+  line-height: 1.5; /* Improve readability */
+}
+
+.section.reverse {
+  flex-direction: column; /* Ensure reverse section stacks vertically */
+}
+
+.section.reverse .text {
+  animation: none; /* Optionally disable animation on mobile */
+}
+}
+@media (max-width: 480px) {
+.logo-image{
+width: 150px;
+}
+}
+@media (max-width: 1000px) {
+.menu-button {
+display: block; /* Show on mobile */
+}
+.links-container {
+display: none; /* Hide links on mobile */
+order: 1;
+}
+.links-container.mobile {
+display: flex; /* Use flexbox for mobile links */
+animation: slide 1s;
+}
+.nav-links{
+width: 160px;
+margin: 0;
+}
+.nav-icon,
+.login-image {
+margin-left: 50px;
+margin-right: 50px;
+}
+.close-button{
+display: block;
+}
+.logo-image{
+order: 2;
+}
+.theme-toggle-button{
+margin-right: 5px;
+margin-left: 5px;
+}
+}
+
