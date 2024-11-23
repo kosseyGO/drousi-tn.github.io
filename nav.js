@@ -2,7 +2,6 @@ const navigationLinks = [
     { img: '/img/home.png', url: `/index.html` },
     { img: '/img/book.png', url: `/lessons.html` },
     { img: '/img/info.png', url: `/about.html` },
-    { img: '/img/contact.png', url: `/contact.html` }
 ];
 
 function createNavigationBar() {
