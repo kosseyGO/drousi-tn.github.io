@@ -332,7 +332,25 @@ height: auto;
 .section a {
   text-decoration: none;
 }
-
+.about{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 50px;
+}
+.about p{
+  font-size: 24px;
+}
+.about h2{
+  color: red;
+  font-size: 36px;
+}
+.about img{
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
 
 /* Define colors for light and dark themes */
 :root {
